@@ -13,10 +13,7 @@ public class Address
 	private String numeroCivico;
 	private String CAP;
 	
-	Address()
-	{
-		
-	}
+	Address() {}
 		
 	public Address(String citta, String via, String numeroCivico, String CAP) {
 		this.citta=citta;
