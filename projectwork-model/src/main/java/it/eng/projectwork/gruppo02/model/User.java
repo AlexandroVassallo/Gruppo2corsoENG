@@ -13,9 +13,11 @@ public class User {
 	@Column(name="FIRST_NAME",nullable=false,length=32)
 	private String nome;
 	
-	private String cognome;
 	@Column(unique=true)
 	private String email;
+	
+	private String cognome;
+
 	
 	public User()
 	{}

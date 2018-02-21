@@ -1,11 +1,13 @@
 package it.eng.projectwork.gruppo02.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /*
  * Creo la classe Supplier come estensione di User
  */
 @Entity
+@Table
 public class Supplier extends User
 {
 	/*
