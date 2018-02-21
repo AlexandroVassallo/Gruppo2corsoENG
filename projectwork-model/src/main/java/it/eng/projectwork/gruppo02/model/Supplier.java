@@ -26,9 +26,9 @@ public class Supplier extends User
 	}
 	 //Implemento un altro costruttore
 	 
-	public Supplier(String username, String nome, String cognome, String email, String info,int valutation)
+	public Supplier(String username, String nome, String cognome, String email, Address address, String info,int valutation)
 	{
-		super(username,nome,cognome,email);
+		super(username,nome,cognome,email,address);
 		this.info=info;
 		this.valutation=valutation;
 	}

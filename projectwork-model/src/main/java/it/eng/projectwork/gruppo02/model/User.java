@@ -1,6 +1,7 @@
 package it.eng.projectwork.gruppo02.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -19,15 +20,27 @@ public class User {
 	@Column(unique=true)
 	private String email;
 	
+	@Embedded
+	private Address address;
+	
 	public User()
 	{}
 
-	public User(String username2, String nome2, String cognome2, String email2) {
+	public User(String username2, String nome2, String cognome2, String email2, Address address) {
 		// TODO Auto-generated constructor stub
 		this.username=username2;
 		this.nome=nome2;
 		this.cognome=cognome2;
 		this.email=email2;
+		this.address=address;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 	public String getUsername() {

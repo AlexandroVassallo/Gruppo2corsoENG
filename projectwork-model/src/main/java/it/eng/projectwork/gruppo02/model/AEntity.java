@@ -13,7 +13,4 @@ public abstract class AEntity<PK extends Serializable>{
 	public String toString() {
 		return "[getNid()="+getNid()+"]";
 	}
-	
-	
-
 }
