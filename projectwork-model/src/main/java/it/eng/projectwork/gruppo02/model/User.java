@@ -17,7 +17,16 @@ public class User {
 	@Column(unique=true)
 	private String email;
 	
-	public User() {}
+	public User()
+	{}
+
+	public User(String username2, String nome2, String cognome2, String email2) {
+		// TODO Auto-generated constructor stub
+		this.username=username2;
+		this.nome=nome2;
+		this.cognome=cognome2;
+		this.email=email2;
+	}
 
 	public String getUsername() {
 		return username;
