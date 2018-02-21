@@ -7,13 +7,13 @@ import javax.persistence.Id;
 @Entity
 public class User {
 	
+	
 	@Id
 	private String username;
 	
 	@Column(name="FIRST_NAME",nullable=false,length=32)
 	private String nome;
 	
-
 	
 	private String cognome;
 	@Column(unique=true)
