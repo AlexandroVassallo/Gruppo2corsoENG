@@ -1,9 +1,5 @@
 package it.eng.projectwork.gruppo02.model;
-
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
 
 @Embeddable
 public class Address 
