@@ -9,9 +9,8 @@
   <dependencies>
   	<dependency>
   		<groupId>it.eng.projectwork.gruppo2</groupId>
-  		<artifactId>projectwork-service</artifactId>
+  		<artifactId>projectwork-model</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
-  		<type>ejb</type>
   	</dependency>
   </dependencies>
 </project>
