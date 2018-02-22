@@ -22,5 +22,10 @@
   		<groupId>javax</groupId>
   		<artifactId>javaee-api</artifactId>
   	</dependency>
+  	<dependency>
+  		<groupId>it.eng.projectwork.gruppo2</groupId>
+  		<artifactId>projectwork-service-interface</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>
