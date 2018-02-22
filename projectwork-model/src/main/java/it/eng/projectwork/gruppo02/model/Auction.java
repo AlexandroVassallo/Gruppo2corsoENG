@@ -1,6 +1,7 @@
 package it.eng.projectwork.gruppo02.model;
 
 import java.util.Date;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +30,7 @@ public class Auction extends AEntity<Long>{
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="AUCTION_ID_SEQ")
 	//Usiamo un nome diverso per il database
 	@SequenceGenerator(name="AUCTION_ID_SEQ",sequenceName="AUCTION_ID_SEQ",allocationSize=1)
-	private Long NId;
+	private Long oid;
 	
 	private String info;
 	
@@ -52,7 +53,11 @@ public class Auction extends AEntity<Long>{
 	//Indica il numero dell'ultima offerta accettata
 	@Version
 	private long version;
+	
 	private boolean pause;
 	
-	
+@Override
+public Long getOid() {
+	return this.oid;
+}	
 }

@@ -1,7 +1,7 @@
 package it.eng.projectwork.gruppo02.model;
 
-import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,13 +21,13 @@ public class Bid extends AEntity<Long>
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="BID_ID_SEQ") 
 	@SequenceGenerator(name="BID_ID_SEQ", sequenceName="BID_ID_SEQ", allocationSize = 1)
-	
-	Long id;
+
+	Long oid;
 	
 	private double prezzoOfferta;
 	
 	//in questo modo stabilisco che il tempo dell'offerta deve essre calcolato al millesimo
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.DATE)
 	Timestamp tempoOfferta;
 	
 
@@ -40,7 +40,7 @@ public class Bid extends AEntity<Long>
 	
 	// costruttore default
 	 
-	Bid()
+	public Bid()
 	{
 		super();
 	}
@@ -54,16 +54,15 @@ public class Bid extends AEntity<Long>
 
 	@Override
 	public Long getOid() {
-		
-		return id;
+		return oid;
 	}
 
 	
 //getters and setters
 	
-	public void setId(long id)
+	public void setOid(long oid)
 	{
-		this.id=id;
+		this.oid=oid;
 	}
 	
 	public double getPrezzoOfferta() {
@@ -84,7 +83,7 @@ public class Bid extends AEntity<Long>
 	public void setTempoOfferta(Timestamp tempoOfferta) {
 		this.tempoOfferta = tempoOfferta;
 	}
-	
+
 	
 
 	

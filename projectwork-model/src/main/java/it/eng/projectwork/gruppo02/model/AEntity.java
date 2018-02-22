@@ -7,10 +7,11 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class AEntity<PK extends Serializable>{
 	
-	public abstract PK getNid();
+	public abstract PK getOid();
 	
 	@Override
 	public String toString() {
-		return "[getNid()="+getNid()+"]";
+		return "[getNid()="+getOid()+"]";
 	}
+
 }
