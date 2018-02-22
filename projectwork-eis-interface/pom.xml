@@ -21,10 +21,5 @@
   	<artifactId>projectwork-model</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   </dependency>
-  <dependency>
-  	<groupId>it.eng.projectwork.gruppo2</groupId>
-  	<artifactId>projectwork-eis</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </dependency>
   </dependencies>
 </project>
