@@ -17,10 +17,10 @@ public class JpacrudTest extends JPAHibernateTest {
 		
 		
 		User u = new User();
-		u.setNome("giancarlo");
-		u.setCognome("compagno");
-		u.setUsername("giacompa");
-		u.setEmail("giancarlo.compagno@eng.it");
+		u.setNome("Salvo");
+		u.setCognome("Battaglia");
+		u.setUsername("SalvoBatt");
+		u.setEmail("group2eng@gmail.con");
 		
 		em.persist(u);
 		
