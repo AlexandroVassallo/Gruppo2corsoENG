@@ -10,14 +10,16 @@ public class SendMailImpl implements SendMail{
 	public SendMailImpl() {}
 
 	@Override
-	public void sendMailAllUser(Message message) throws EmailNotSendException {
-		// TODO Auto-generated method stub
+	public void sendMailAllUser()  {
+
+			System.out.println("Email inviata");
 		
 	}
 
 	@Override
 	public void sendMail(Message message, String destination) throws EmailNotSendException {
-		// TODO Auto-generated method stub
+		
+		System.out.println("E-mail Inviata");
 		
 	};
 
