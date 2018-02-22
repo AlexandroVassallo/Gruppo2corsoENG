@@ -28,7 +28,7 @@ public class Auction extends AEntity<Long>{
 	@SequenceGenerator(name="AUCTION_ID_SEQ",sequenceName="AUCTION_ID_SEQ",allocationSize=1)
 	private Long oid;
 	
-	private String info;
+	private String info; // NON USATO FINORA
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date startAuction;
@@ -50,7 +50,7 @@ public class Auction extends AEntity<Long>{
 	@Version
 	private long version;
 	
-	private boolean pause;
+	private boolean pause; //NON USATO FINORA
 	
 @Override
 public Long getOid() {
