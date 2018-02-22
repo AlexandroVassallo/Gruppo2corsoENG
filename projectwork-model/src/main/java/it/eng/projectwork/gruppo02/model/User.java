@@ -4,9 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
+@Table(name="USERX")//lo facciamo perche user è parola chiave
 @Entity
-public class User {
+@Inheritance(strategy=InheritanceType.JOINED)//definiamo politica di ereditarieta
+public class User extends AEntity<String>{
 	
 	
 	@Id
@@ -17,7 +23,7 @@ public class User {
 	
 	
 	private String cognome;
-	@Column(unique=true)
+	@Column(unique=true) //l email è come se fosse chaive, ma possiamo cambiarla nel tempo
 	private String email;
 	
 	@Embedded
@@ -78,6 +84,13 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + "]";
+	}
+
+	@Override
+	@Transient //lo annotiamo perchè è un metodo accessorio che non deve essere mappato
+	public String getOid() {
+		// TODO Auto-generated method stub
+		return username;
 	}
 	
 	

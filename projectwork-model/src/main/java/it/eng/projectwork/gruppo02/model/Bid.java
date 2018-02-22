@@ -1,5 +1,6 @@
 package it.eng.projectwork.gruppo02.model;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table
@@ -24,7 +26,10 @@ public class Bid extends AEntity<Long>
 
 	Long oid;
 	
-	private double prezzoOfferta;
+	//dichiariamo BigDecimal altrimenti da problemi per vari motivi
+	private BigDecimal prezzoOfferta;
+	
+	
 	
 	//in questo modo stabilisco che il tempo dell'offerta deve essre calcolato al millesimo
 	//@Temporal(TemporalType.DATE)
@@ -45,7 +50,7 @@ public class Bid extends AEntity<Long>
 		super();
 	}
 
-	public Bid(User user, double price, Auction auction){
+	public Bid(User user, BigDecimal price, Auction auction){
 		this.user = user;
 		this.prezzoOfferta = price;
 		this.tempoOfferta = new Timestamp(System.currentTimeMillis());
@@ -65,12 +70,12 @@ public class Bid extends AEntity<Long>
 		this.oid=oid;
 	}
 	
-	public double getPrezzoOfferta() {
+	public BigDecimal getPrezzoOfferta() {
 		return prezzoOfferta;
 	}
 
 
-	public void setPrezzoOfferta(double prezzoOfferta) {
+	public void setPrezzoOfferta(BigDecimal prezzoOfferta) {
 		this.prezzoOfferta = prezzoOfferta;
 	}
 
