@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>projectwork-service</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>it.eng.projectwork.gruppo2</groupId>
+  		<artifactId>projectwork-model</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
