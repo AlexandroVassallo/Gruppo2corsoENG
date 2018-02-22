@@ -1,10 +1,8 @@
 package it.eng.projectwork.gruppo02.model;
 
 import java.util.Date;
-
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,8 +15,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
-
-import org.hibernate.annotations.ManyToAny;
 
 
 @Table
