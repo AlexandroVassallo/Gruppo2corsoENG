@@ -45,7 +45,7 @@ public class Auction extends AEntity<Long>{
 	
 	@ManyToOne
 	private Supplier supplier;
-	
+	  
 	@OneToMany(mappedBy="auction",cascade=CascadeType.ALL)
 	private List<Bid> bids=new ArrayList<Bid>();
 	
