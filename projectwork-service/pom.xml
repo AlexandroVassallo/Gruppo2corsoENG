@@ -6,12 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>projectwork-service</artifactId>
+  <packaging>ejb</packaging>
   <dependencies>
-  	<dependency>
-  		<groupId>it.eng.projectwork.gruppo2</groupId>
-  		<artifactId>projectwork-model</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   	<dependency>
   		<groupId>it.eng.projectwork.gruppo2</groupId>
   		<artifactId>projectwork-eis-interface</artifactId>
@@ -19,9 +15,18 @@
   	</dependency>
   	<dependency>
   		<groupId>it.eng.projectwork.gruppo2</groupId>
-  		<artifactId>projectwork-service-interface</artifactId>
+  		<artifactId>projectwork-service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>ejb</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>it.eng.projectwork.gruppo2</groupId>
+  		<artifactId>projectwork-model</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>javax</groupId>
+  		<artifactId>javaee-api</artifactId>
+  	</dependency>
   </dependencies>
-  <packaging>ejb</packaging>
 </project>
