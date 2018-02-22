@@ -52,10 +52,7 @@ public class Auction extends AEntity<Long>{
 	//Indica il numero dell'ultima offerta accettata
 	@Version
 	private long version;
-	
 	private boolean pause;
-	
-	
 	
 	
 }
