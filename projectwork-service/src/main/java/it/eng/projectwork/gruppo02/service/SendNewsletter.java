@@ -14,9 +14,16 @@ public class SendNewsletter {
 	@EJB
 	SendMail sendMail;
 
+
+public SendNewsletter(SendMail sendMail) {
+		super();
+		this.sendMail = sendMail;
+	}
+
+
 //mettiamo dentro sendmail una systemout per capire se funziona
 	@Schedule(minute="0/1", persistent=false)
-	public void SendNewsletter()
+	public void SendLetter()
 	{
 		sendMail.sendMailAllUser();
 	}

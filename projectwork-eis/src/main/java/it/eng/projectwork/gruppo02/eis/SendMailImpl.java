@@ -1,8 +1,10 @@
-package it.eng.projectwork.gruppo02.model;
+package it.eng.projectwork.gruppo02.eis;
 
 import javax.ejb.Stateless;
 
-import it.eng.projectwork.gruppo02.model.exception.EmailNotSendException;
+
+import it.eng.projectwork.gruppo02.model.Message;
+import it.eng.projectwork.gruppo02.model.SendMail;
 
 @Stateless
 public class SendMailImpl implements SendMail{
@@ -17,7 +19,7 @@ public class SendMailImpl implements SendMail{
 	}
 
 	@Override
-	public void sendMail(Message message, String destination) throws EmailNotSendException {
+	public void sendMail(Message message, String destination){
 		
 		System.out.println("E-mail Inviata");
 		
