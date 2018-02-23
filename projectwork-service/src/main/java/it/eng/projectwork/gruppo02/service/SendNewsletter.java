@@ -1,11 +1,11 @@
 package it.eng.projectwork.gruppo02.service;
 
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Schedule;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
-import it.eng.projectwork.gruppo02.model.Message;
 import it.eng.projectwork.gruppo02.model.SendMail;
 
 @Singleton
@@ -14,14 +14,19 @@ public class SendNewsletter {
 	
 	@EJB
 	SendMail sendMail;
+	
+	
+	@PostConstruct
+	public void testInit() {
+		System.out.println("test inti");
+	}
 
-	public void SendMailAllUser()
-	{
+	public void sendMailAllUser(){
 		System.out.print("EMAIL INVIATA");
 	}
-	@Schedule(minute="0/1", persistent=false)
 	
-	public void SendNewsletter()
+	@Schedule(second="*",persistent=false)
+	public void sendNewsletter()
 	{
 		sendMail.sendMailAllUser();
 		

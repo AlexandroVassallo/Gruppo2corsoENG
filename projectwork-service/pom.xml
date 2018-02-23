@@ -21,6 +21,7 @@
   	<dependency>
   		<groupId>javax</groupId>
   		<artifactId>javaee-api</artifactId>
+  		<scope>provided</scope>
   	</dependency>
   	<dependency>
   		<groupId>it.eng.projectwork.gruppo2</groupId>
